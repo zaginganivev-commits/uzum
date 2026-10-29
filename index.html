@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzum Market — Internet-do'kon</title>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+        <div class="container topbar__container">
+            <div class="topbar__left">
+                <div class="topbar__location">
+                    <svg class="topbar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                        <circle cx="12" cy="9" r="2.5"/>
+                    </svg>
+                    <span>Shahar: <strong class="topbar__city">Toshkent</strong></span>
+                    <svg class="topbar__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </div>
+                <a href="#points" class="topbar__link">Topshirish punktlari</a>
+            </div>
+
+            <div class="topbar__right">
+                <a href="#seller" class="topbar__link topbar__link--purple">Sotuvchi bo'lish</a>
+                <span class="topbar__divider">|</span>
+                <a href="#open-point" class="topbar__link topbar__link--purple">Topshirish punktini ochish</a>
+                <a href="#faq" class="topbar__link">Savol-javob</a>
+                <a href="#orders" class="topbar__link">Buyurtmalarim</a>
+                <div class="topbar__lang">
+                    <span class="flag-icon">
+                        <svg viewBox="0 0 24 24" width="18" height="18">
+                            <circle cx="12" cy="12" r="11" fill="#0099b5"/>
+                            <path d="M1 8.5h22v7H1z" fill="#ce1126"/>
+                            <path d="M1 9.2h22v5.6H1z" fill="#ffffff"/>
+                            <path d="M1.3 15.5A11 11 0 0 0 22.7 15.5H1.3z" fill="#1eb53a"/>
+                        </svg>
+                    </span>
+                    <span>O'zbekcha</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN HEADER -->
+    <div class="main-header">
+        <div class="container main-header__container">
+            <!-- Logo -->
+            <a href="#" class="main-header__logo-link">
+                <img src="./assets/uzum_logo.png" alt="Uzum Market" class="main-header__logo">
+            </a>
+
+            <!-- Katalog Button -->
+            <button class="catalog-btn" type="button">
+                <span class="catalog-btn__icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <rect x="3" y="4" width="7" height="6" rx="1.5"/>
+                        <rect x="14" y="4" width="7" height="6" rx="1.5"/>
+                        <rect x="3" y="14" width="7" height="6" rx="1.5"/>
+                        <rect x="14" y="14" width="7" height="6" rx="1.5"/>
+                    </svg>
+                </span>
+                <span class="catalog-btn__text">Katalog</span>
+            </button>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" class="search-bar__input" placeholder="Mahsulotlar va turkumlar izlash">
+                <button class="search-bar__btn" type="submit" aria-label="Qidirish">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                        <circle cx="11" cy="11" r="7"/>
+                        <line x1="16" y1="16" x2="21" y2="21"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <a href="#login" class="header-action">
+                    <svg class="header-action__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span class="header-action__text">Kirish</span>
+                </a>
+
+                <a href="#favorites" class="header-action">
+                    <svg class="header-action__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                    <span class="header-action__text">Saralangan</span>
+                </a>
+
+                <a href="#cart" class="header-action">
+                    <svg class="header-action__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <path d="M16 10a4 4 0 0 1-8 0"/>
+                    </svg>
+                    <span class="header-action__text">Savat</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CATEGORIES SUB-NAV -->
+    <nav class="subnav">
+        <div class="container subnav__container">
+            <a href="#arzon" class="subnav__item subnav__item--bold">
+                <img src="./assets/nav_arzon.png" alt="" class="subnav__icon">
+                <span>Arzon narxlar kafolati</span>
+            </a>
+            <a href="#kuzgi" class="subnav__item subnav__item--bold">
+                <img src="./assets/nav_kuzgi.png" alt="" class="subnav__icon">
+                <span>Kuzgi kolleksiya</span>
+            </a>
+            <a href="#gozallik" class="subnav__item subnav__item--bold">
+                <img src="./assets/nav_gozal.png" alt="" class="subnav__icon">
+                <span>Sizning go'zalligingiz</span>
+            </a>
+            <a href="#apple" class="subnav__item subnav__item--bold">
+                <img src="./assets/nav_apple.png" alt="" class="subnav__icon subnav__icon--apple">
+                <span>Apple</span>
+            </a>
+            <a href="#mebel" class="subnav__item">Mebel</a>
+            <a href="#turizm" class="subnav__item">Turizm, baliq ovi va ovchilik</a>
+            <a href="#elektronika" class="subnav__item">Elektronika</a>
+            <a href="#texnika" class="subnav__item">Maishiy texnika</a>
+            <a href="#kiyim" class="subnav__item">Kiyim</a>
+            <div class="subnav__more">
+                <span>Yana</span>
+                <svg class="subnav__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9l6 6 6-6"/>
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="container">
+
+            <!-- HERO BANNER -->
+            <section class="banner-section">
+                <div class="banner">
+                    <img src="./assets/banner.png" alt="MONNO tagliklari, trusiklari va bolalar kosmetikasi" class="banner__img">
+                    <button class="banner__arrow banner__arrow--left" aria-label="Oldingi banner">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <button class="banner__arrow banner__arrow--right" aria-label="Keyingi banner">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- 4 TOP CATEGORY CARDS -->
+            <section class="top-categories">
+                <a href="#elektronika" class="top-cat-card">
+                    <div class="top-cat-card__thumb">
+                        <img src="./assets/cat_elektronika.png" alt="Elektronika">
+                    </div>
+                    <span class="top-cat-card__title">Elektronika</span>
+                </a>
+
+                <a href="#har-kuni" class="top-cat-card">
+                    <div class="top-cat-card__thumb">
+                        <img src="./assets/cat_harkuni.png" alt="Har kuni uchun">
+                    </div>
+                    <span class="top-cat-card__title">Har kuni uchun</span>
+                </a>
+
+                <a href="#moda" class="top-cat-card">
+                    <div class="top-cat-card__thumb">
+                        <img src="./assets/cat_moda.png" alt="Moda">
+                    </div>
+                    <span class="top-cat-card__title">Moda</span>
+                </a>
+
+                <a href="#bolalar" class="top-cat-card">
+                    <div class="top-cat-card__thumb">
+                        <img src="./assets/cat_bolalar.png" alt="Bolalar uchun">
+                    </div>
+                    <span class="top-cat-card__title">Bolalar uchun</span>
+                </a>
+            </section>
+
+            <!-- PRODUCTS SECTION -->
+            <section class="products-section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span>Mashhur</span>
+                        <svg class="section-title__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </h2>
+                </div>
+
+                <!-- 10 PRODUCT CARDS (2 rows of 5) -->
+                <div class="product-grid">
+
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-card__img-box">
+                            <img src="./assets/prod_1.png" alt="Dvigatel tozalovchi Axma Avtoproseries, 600 g" class="product-card__img">
+                            <input type="checkbox" id="fav-1" class="fav-toggle">
+                            <label for="fav-1" class="fav-btn" title="Saralanganlarga qo'shish">
+                                <svg class="fav-btn__heart" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__price-row">
+                                <span class="product-card__current-price">29 000</span>
+                                <span class="product-card__old-price">38 000</span>
+                            </div>
+                            <div class="product-card__installment">2 054 so'mdan</div>
+                            <h3 class="product-card__title" title="Dvigatel tozalovchi Axma Avtoproseries, 600 g">
+                                Dvigatel tozalovchi Axma Avtoproseries, 600 g
+                            </h3>
+                            <div class="product-card__rating">
+                                <span class="rating-star">★</span>
+                                <span class="rating-score">4.8</span>
+                                <span class="rating-count">(619 sharhlar)</span>
+                            </div>
+                            <button class="cart-btn" type="button">
+                                <svg class="cart-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                                    <line x1="3" y1="6" x2="21" y2="6"/>
+                                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                                </svg>
+                                <span>Ertaga</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-card__img-box">
+                            <img src="./assets/prod_2.png" alt="Ko'z uchun suvga chidamli podvodka Dip Eyeliner Black, 5.1 ml" class="product-card__img">
+                            <input type="checkbox" id="fav-2" class="fav-toggle">
+                            <label for="fav-2" class="fav-btn" title="Saralanganlarga qo'shish">
+                                <svg class="fav-btn__heart" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__price-row">
+                                <span class="product-card__current-price">37 990</span>
+                                <span class="product-card__old-price">86 210</span>
+                            </div>
+                            <div class="product-card__installment">2 691 so'mdan</div>
+                            <h3 class="product-card__title" title="Ko'z uchun suvga chidamli podvodka Dip Eyeliner Black, 5.1 ml">
+                                Ko'z uchun suvga chidamli podvodka Dip Eyeliner Black, 5.1 ml
+                            </h3>
+                            <div class="product-card__rating">
+                                <span class="rating-star">★</span>
+                                <span class="rating-score">4.9</span>
+                                <span class="rating-count">(2909 sharhlar)</span>
+                            </div>
+                            <button class="cart-btn" type="button">
+                                <svg class="cart-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                                    <line x1="3" y1="6" x2="21" y2="6"/>
+                                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                                </svg>
+                                <span>Ertaga</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-card__img-box">
+                            <img src="./assets/prod_3.png" alt="Bug'doy uni MAKFA , yuqori nav, 2 kg" class="product-card__img">
+                            <input type="checkbox" id="fav-3" class="fav-toggle">
+                            <label for="fav-3" class="fav-btn" title="Saralanganlarga qo'shish">
+                                <svg class="fav-btn__heart" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__price-row">
+                                <span class="product-card__current-price">29 990</span>
+                                <span class="product-card__old-price">39 000</span>
+                            </div>
+                            <div class="product-card__installment">2 124 so'mdan</div>
+                            <h3 class="product-card__title" title="Bug'doy uni MAKFA , yuqori nav, 2 kg">
+                                Bug'doy uni MAKFA , yuqori nav, 2 kg
+                            </h3>
+                            <div class="product-card__rating">
+                                <span class="rating-star">★</span>
+                                <span class="rating-score">4.9</span>
+                                <span class="rating-count">(4755 sharhlar)</span>
+                            </div>
+                            <button class="cart-btn" type="button">
+                                <svg class="cart-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                                    <line x1="3" y1="6" x2="21" y2="6"/>
+                                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                                </svg>
+                                <span>Ertaga</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-card__img-box">
+                            <img src="./assets/prod_4.png" alt="Qizlar uchun shortilar Diva Kids DVKID46" class="product-card__img">
+                            <input type="checkbox" id="fav-4" class="fav-toggle">
+                            <label for="fav-4" class="fav-btn" title="Saralanganlarga qo'shish">
+                                <svg class="fav-btn__heart" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__price-row">
+                                <span class="product-card__current-price">55 000</span>
+                                <span class="product-card__old-price">105 000</span>
+                            </div>
+                            <div class="product-card__installment">3 896 so'mdan</div>
+                            <h3 class="product-card__title" title="Qizlar uchun shortilar Diva Kids DVKID46">
+                                Qizlar uchun shortilar Diva Kids DVKID46
+                            </h3>
+                            <div class="product-card__rating">
+                                <span class="rating-star">★</span>
+                                <span class="rating-score">5.0</span>
+                                <span class="rating-count">(6 sharhlar)</span>
+                            </div>
+                            <button class="cart-btn" type="button">
+                                <svg class="cart-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                                    <line x1="3" y1="6" x2="21" y2="6"/>
+                                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                                </svg>
+                                <span>Ertaga</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card">
+                        <div class="product-card__img-box">
+                            <img src="./assets/prod_5.png" alt="O'g'il bolalar uchun krossovkalar Adidas GV7946" class="product-card__img">
+                            <input type="checkbox" id="fav-5" class="fav-toggle">
+                            <label for="fav-5" class="fav-btn" title="Saralanganlarga qo'shish">
+                                <svg class="fav-btn__heart" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__price-row">
+                                <span class="product-card__current-price">289 500</span>
+                                <span class="product-card__old-price">869 000</span>
+                            </div>
+                            <div class="product-card__installment">20 506 so'mdan</div>
+                            <h3 class="product-card__title" title="O'g'il bolalar uchun krossovkalar Adidas GV7946">
+                                O'g'il bolalar uchun krossovkalar Adidas GV7946
+                            </h3>
+                            <div class="product-card__rating">
+                                <span class="rating-star">★</span>
+                                <span class="rating-score">4.5</span>
+                                <span class="rating-count">(2 sharhlar)</span>
+                            </div>
+                            <button class="cart-btn" type="button">
+                                <svg class="cart-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                                    <line x1="3" y1="6" x2="21" y2="6"/>
+                                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                                </svg>
+                                <span>Ertaga</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-card">
+                        <div class="product-card__img-box">
+                            <img src="./assets/prod_6.png" alt="Bolalar uchun futbolka Diva Kids DVKID10" class="product-card__img">
+                            <input type="checkbox" id="fav-6" class="fav-toggle">
+                            <label for="fav-6" class="fav-btn" title="Saralanganlarga qo'shish">
+                                <svg class="fav-btn__heart" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__price-row">
+                                <span class="product-card__current-price">52 800</span>
+                                <span class="product-card__old-price">101 000</span>
+                            </div>
+                            <div class="product-card__installment">3 740 so'mdan</div>
+                            <h3 class="product-card__title" title="Bolalar uchun futbolka Diva Kids DVKID10">
+                                Bolalar uchun futbolka Diva Kids DVKID10
+                            </h3>
+                            <div class="product-card__rating">
+                                <span class="rating-star">★</span>
+                                <span class="rating-score">5.0</span>
+                                <span class="rating-count">(3 sharhlar)</span>
+                            </div>
+                            <button class="cart-btn" type="button">
+                                <svg class="cart-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                                    <line x1="3" y1="6" x2="21" y2="6"/>
+                                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                                </svg>
+                                <span>Ertaga</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="product-card">
+                        <div class="product-card__img-box">
+                            <img src="./assets/prod_7.png" alt="O'g'il bolalar shortilari Diva Kids DVKID15" class="product-card__img">
+                            <input type="checkbox" id="fav-7" class="fav-toggle">
+                            <label for="fav-7" class="fav-btn" title="Saralanganlarga qo'shish">
+                                <svg class="fav-btn__heart" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__price-row">
+                                <span class="product-card__current-price">86 400</span>
+                                <span class="product-card__old-price">165 000</span>
+                            </div>
+                            <div class="product-card__installment">6 120 so'mdan</div>
+                            <h3 class="product-card__title" title="O'g'il bolalar shortilari Diva Kids DVKID15">
+                                O'g'il bolalar shortilari Diva Kids DVKID15
+                            </h3>
+                            <div class="product-card__rating">
+                                <span class="rating-star">★</span>
+                                <span class="rating-score">5.0</span>
+                                <span class="rating-count">(3 sharhlar)</span>
+                            </div>
+                            <button class="cart-btn" type="button">
+                                <svg class="cart-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                                    <line x1="3" y1="6" x2="21" y2="6"/>
+                                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                                </svg>
+                                <span>Ertaga</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="product-card">
+                        <div class="product-card__img-box">
+                            <img src="./assets/prod_8.png" alt="O'g'il bolalar uchun polo Diva Kids DVKID14" class="product-card__img">
+                            <input type="checkbox" id="fav-8" class="fav-toggle">
+                            <label for="fav-8" class="fav-btn" title="Saralanganlarga qo'shish">
+                                <svg class="fav-btn__heart" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__price-row">
+                                <span class="product-card__current-price">112 200</span>
+                                <span class="product-card__old-price">214 000</span>
+                            </div>
+                            <div class="product-card__installment">7 948 so'mdan</div>
+                            <h3 class="product-card__title" title="O'g'il bolalar uchun polo Diva Kids DVKID14">
+                                O'g'il bolalar uchun polo Diva Kids DVKID14
+                            </h3>
+                            <div class="product-card__rating">
+                                <span class="rating-star">★</span>
+                                <span class="rating-score">5.0</span>
+                                <span class="rating-count">(1 sharh)</span>
+                            </div>
+                            <button class="cart-btn" type="button">
+                                <svg class="cart-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                                    <line x1="3" y1="6" x2="21" y2="6"/>
+                                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                                </svg>
+                                <span>Ertaga</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 9 -->
+                    <div class="product-card">
+                        <div class="product-card__img-box">
+                            <img src="./assets/prod_9.png" alt="O'g'il bolalar uchun to'plam MAYORAL 3659" class="product-card__img">
+                            <input type="checkbox" id="fav-9" class="fav-toggle">
+                            <label for="fav-9" class="fav-btn" title="Saralanganlarga qo'shish">
+                                <svg class="fav-btn__heart" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__price-row">
+                                <span class="product-card__current-price">162 850</span>
+                                <span class="product-card__old-price">652 000</span>
+                            </div>
+                            <div class="product-card__installment">11 535 so'mdan</div>
+                            <h3 class="product-card__title" title="O'g'il bolalar uchun to'plam MAYORAL 3659">
+                                O'g'il bolalar uchun to'plam MAYORAL 3659
+                            </h3>
+                            <div class="product-card__tag-row">
+                                <span class="product-card__sparkle-tag">✦ YANGILIK</span>
+                            </div>
+                            <button class="cart-btn" type="button">
+                                <svg class="cart-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                                    <line x1="3" y1="6" x2="21" y2="6"/>
+                                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                                </svg>
+                                <span>Ertaga</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 10 -->
+                    <div class="product-card">
+                        <div class="product-card__img-box">
+                            <img src="./assets/prod_10.png" alt="Qizlar uchun bluzka Mayoral 3134" class="product-card__img">
+                            <input type="checkbox" id="fav-10" class="fav-toggle">
+                            <label for="fav-10" class="fav-btn" title="Saralanganlarga qo'shish">
+                                <svg class="fav-btn__heart" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__price-row">
+                                <span class="product-card__current-price">143 550</span>
+                                <span class="product-card__old-price">575 000</span>
+                            </div>
+                            <div class="product-card__installment">10 168 so'mdan</div>
+                            <h3 class="product-card__title" title="Qizlar uchun bluzka Mayoral 3134">
+                                Qizlar uchun bluzka Mayoral 3134
+                            </h3>
+                            <div class="product-card__tag-row">
+                                <span class="product-card__sparkle-tag">✦ YANGILIK</span>
+                            </div>
+                            <button class="cart-btn" type="button">
+                                <svg class="cart-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                                    <line x1="3" y1="6" x2="21" y2="6"/>
+                                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                                </svg>
+                                <span>Ertaga</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <h4 class="footer__title">Biz haqimizda</h4>
+                <ul class="footer__list">
+                    <li><a href="#">Topshirish punktlari</a></li>
+                    <li><a href="#">Vakansiyalar</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Foydalanuvchilarga</h4>
+                <ul class="footer__list">
+                    <li><a href="#">Biz bilan bog'lanish</a></li>
+                    <li><a href="#">Savol-Javob</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Tadbirkorlarga</h4>
+                <ul class="footer__list">
+                    <li><a href="#">Uzumda soting</a></li>
+                    <li><a href="#">Sotuvchi kabinetiga kirish</a></li>
+                    <li><a href="#">Topshirish punktini ochish</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Ilovani yuklab olish</h4>
+                <div class="footer__apps">
+                    <a href="#" class="app-badge">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.35-.58.67-1.09 1.74-.96 2.77 1.01.08 2.07-.52 2.69-1.27z"/>
+                        </svg>
+                        <span>App Store</span>
+                    </a>
+                    <a href="#" class="app-badge">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M3.6 2.3c-.3.4-.6 1-.6 1.7v16c0 .7.3 1.3.6 1.7l9.4-9.7L3.6 2.3zm1.6-1.1L16 7.5l-2.4 2.4-8.4-8.7zm0 21.6l8.4-8.7 2.4 2.4-10.8 6.3zm12.3-7.2l3.4-2c.9-.5.9-1.4 0-1.9l-3.4-2-2.7 2.9 2.7 3z"/>
+                        </svg>
+                        <span>Google Play</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <p class="footer__copyright">«2026© XK MCHJ «UZUM MARKET». Barcha huquqlar himoyalangan»</p>
+                <div class="footer__links">
+                    <a href="#">Maxfiylik kelishuvi</a>
+                    <a href="#">Foydalanuvchi kelishuvi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+    
